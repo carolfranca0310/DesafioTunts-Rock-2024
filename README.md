@@ -40,9 +40,9 @@ clique no botão "Code". Isso abrirá um menu suspenso onde você pode copiar o 
 ### Clone o Repositório: 
 Use o comando git clone seguido pelo URL do repositório que você copiou anteriormente.
 ### Abra o projeto: 
-Abra a solução do projeto no Visual Studio. 
+Abra a solução do projeto no Visual Studio 22. 
 ### Execute o Projeto: 
-Pressione F5 ou clique em "Iniciar" na barra de ferramentas do Visual Studio para compilar e iniciar o projeto. O Visual Studio iniciará o servidor web embutido e abrirá o navegador padrão com a página inicial do seu projeto.
+Pressione F5 ou clique em "Iniciar" na barra de ferramentas do Visual Studio para compilar e iniciar o projeto. O Visual Studio iniciará o servidor web embutido e abrirá o navegador padrão com a página inicial do projeto.
 
-##Sobre a execução do projeto
-Caso o projeto não rode, vá na barra de ferramentas e selecione o IIS Express.
+## Sobre a execução do projeto
+Caso o projeto não rode, vá na barra de ferramentas e selecione o IIS Express ou experimente fazer uso de outro navegador copiando a URL gerada.
