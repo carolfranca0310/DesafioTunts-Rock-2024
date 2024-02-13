@@ -35,11 +35,14 @@ Chama a função responsável por calcular as notas dos alunos e redireciona par
 Recebe a lista de médias chama a função responsavel por calcular a nota final e depois reássa a informação para a página que exibe as notas dos alunos
 
 ## Para executar um projeto ASP.NET MVC, siga estes passos:
-Copie o URL do Repositório: clique no botão "Code". Isso abrirá um menu suspenso onde você pode copiar o URL do repositório. 
-Clone o Repositório: Use o comando git clone seguido pelo URL do repositório que você copiou anteriormente.
-Abra o projeto: Abra a solução do projeto no Visual Studio. 
-Execute o Projeto: Pressione F5 ou clique em "Iniciar" na barra de ferramentas do Visual Studio para compilar e iniciar o projeto. O Visual Studio iniciará o servidor web embutido e abrirá o navegador padrão com a página inicial do seu projeto.
+### Copie o URL do Repositório: 
+clique no botão "Code". Isso abrirá um menu suspenso onde você pode copiar o URL do repositório. 
+### Clone o Repositório: 
+Use o comando git clone seguido pelo URL do repositório que você copiou anteriormente.
+### Abra o projeto: 
+Abra a solução do projeto no Visual Studio. 
+### Execute o Projeto: 
+Pressione F5 ou clique em "Iniciar" na barra de ferramentas do Visual Studio para compilar e iniciar o projeto. O Visual Studio iniciará o servidor web embutido e abrirá o navegador padrão com a página inicial do seu projeto.
 
-
-```sobre a execução do projeto
+##Sobre a execução do projeto
 Caso o projeto não rode, vá na barra de ferramentas e selecione o IIS Express.
