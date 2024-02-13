@@ -8,7 +8,8 @@
         public float P1 { get; set; }
         public float P2 { get; set; }
         public float P3 { get; set; }
-        public string Situation { get; set; }
-        public int FinalPassing { get; set; }
+        public SituationEnum Situation { get; set; }
+        public float FinalPassing { get; set; }
+        public float FinalGrade { get; set; }
     }
 }
