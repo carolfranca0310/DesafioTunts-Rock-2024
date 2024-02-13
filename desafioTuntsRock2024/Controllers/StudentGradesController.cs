@@ -33,7 +33,7 @@ namespace desafioTuntsRock2024.Controllers
         [HttpPost]
         public IActionResult SaveAvg(List<StudentGradeRecordViewModel> students)
         {
-            var listAvg = _sheetHelper.CalculateAverage(students);
+            var listAvg = _sheetHelper.CalculateFinalGrade(students);
             var sheets = _sheetHelper.ConvertSpreadsheet(_sheetHelper.SpreadSheet());
 
             foreach (var studentAvg in listAvg)

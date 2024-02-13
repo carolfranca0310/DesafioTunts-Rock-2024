@@ -139,7 +139,7 @@ namespace desafioTuntsRock2024.Helper
             return listStudentsRemediation;
         }
 
-        public IEnumerable<StudentAvgViewModel> CalculateAverage(List<StudentGradeRecordViewModel> studentsGradeRecord)
+        public IEnumerable<StudentAvgViewModel> CalculateFinalGrade(List<StudentGradeRecordViewModel> studentsGradeRecord)
         {
             var listSudentAvg = new List<StudentAvgViewModel>();
 
