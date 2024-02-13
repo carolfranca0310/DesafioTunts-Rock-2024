@@ -1,10 +1,18 @@
-﻿using desafioTuntsRock2024.Models;
+﻿using desafioTuntsRock2024.Helper;
+using desafioTuntsRock2024.Models;
+using desafioTuntsRock2024.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace desafioTuntsRock2024.Controllers
 {
     public class StudentGradesController : Controller
     {
+        private readonly SheetsHelper _sheetHelper;
+
+        public StudentGradesController()
+        {
+            _sheetHelper = new SheetsHelper();
+        }
         public IActionResult Index()
         {
             return View();
@@ -12,26 +20,31 @@ namespace desafioTuntsRock2024.Controllers
 
         public IActionResult CalculateGrades()
         {
+
             return RedirectToAction(nameof(FinalPassing));
         }
 
         public IActionResult FinalPassing()
         {
-            var list = new List<Student>
+            List<Student> listStudentsRemediation = _sheetHelper.CalculateGrades();
+            return View(listStudentsRemediation);
+        }
+
+        [HttpPost]
+        public IActionResult SaveAvg(List<StudentGradeRecordViewModel> students)
+        {
+            var listAvg = _sheetHelper.CalculateAverage(students);
+            var sheets = _sheetHelper.ConvertSpreadsheet(_sheetHelper.SpreadSheet());
+
+            foreach (var studentAvg in listAvg)
             {
-                new()
+                var studentCorrespondente = sheets.FirstOrDefault(s => s.Registration == studentAvg.Registration);
+                if (studentCorrespondente != null)
                 {
-                    Registration = 1,
-                    Name = "Caroline",
-                    Absence = 8,
-                    P1 = 9,
-                    P2 = 10,
-                    P3 = 11,
-                    FinalPassing = 0,
-                    Situation = "Aprovado"
+                    studentCorrespondente.FinalGrade = studentAvg.FinalGrade;
                 }
-            };
-            return View(list);
+            }
+            return View(nameof(FinalPassing), sheets); 
         }
     }
 }
